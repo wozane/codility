@@ -1,3 +1,6 @@
 def solution(a, k)
-  a.rotate(-k)
+  k.times do
+    a.unshift(a.pop)
+  end
+  a
 end
