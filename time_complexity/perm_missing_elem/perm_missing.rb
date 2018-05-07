@@ -1,9 +1,8 @@
 def solution(a)
-  a.sort!
+  i = a.length + 1
+  real_sum = 0
 
-  a.each_with_index do |n, i|
-    if n - i > 1
-      return n - 1
-    end
-  end
+  a.each { |n| real_sum += n }
+  incomplete_sum = (i * (i + 1)) / 2
+  incomplete_sum - real_sum
 end
